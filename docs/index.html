@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, maximum-scale=1">
+
+<title>Homepage</title>
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800italic,700italic,600italic,400italic,300italic,800,700,600' rel='stylesheet' type='text/css'>
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/responsive.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+
+<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
+
+<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/jquery-scrolltofixed.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script src="contactform/contactform.js"></script>
+
+<!-- =======================================================
+    Theme Name: Knight
+    Theme URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+======================================================= -->
+
+</head>
+<body>
+<header class="header" id="header"><!--header-start-->
+	<div class="container">
+    	<figure class="logo animated fadeInDown delay-07s">
+        	<a href="#"><img src="img/logo.png" alt=""></a>
+        </figure>
+        <h1 class="animated fadeInDown delay-07s" style="color:#e87102">Welcome to the Princeton Prowler</h1>
+        <ul class="we-create animated fadeInUp delay-1s">
+        	<li>The only publication aggregator for Princeton's campus.</li>
+        </ul>
+            <a class="link animated fadeInUp delay-1s servicelink" style="background-color:#e87102" href="#service">Prowl Onwards</a>
+    </div>
+</header><!--header-end-->
+
+<nav class="main-nav-outer" id="test"><!--main-nav-start-->
+	<div class="container">
+        <ul class="main-nav">
+        	<li><a href="#header">Home</a></li>
+            <li><a href="#service">Overview</a></li>
+            <li><a href="#design">Design</a></li>
+						<li><a href="oldWebsite/index.html">Timeline</a></li>
+            <li><a href="#team">Contact</a></li>
+            <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
+    </div>
+</nav><!--main-nav-end-->
+
+
+
+<section class="main-section" id="service"><!--main-section-start-->
+	<div class="container">
+    	<h2>Overview</h2>
+    	<h6>The Prowler is an article aggregator application for publications on Princeton’s campus.
+				The Prowler offers a beautiful interface for easy reading and searching of articles across multiple publications.
+				Articles are updated by the hour, so you'll never miss out on the latest controversy.
+				The user interface dynamic and able to easily expand to support new publications, without any extra installations or updates.</h6>
+        <div class="row">
+        	<div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+            	<div class="service-list">
+                	<div class="service-list-col1">
+                    	<i class="fa-paw"></i>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3>branding &amp; identity</h3>
+                        <p>Prowl across multiple publications at once.</p>
+                    </div>
+                </div>
+                <!-- <div class="service-list">
+                	<div class="service-list-col1">
+                    	<i class="fa-gear"></i>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3>web development</h3>
+                        <p>Proin iaculis purus consequat sem digni ssim. Digni ssim porttitora .</p>
+                    </div>
+                </div> -->
+                <!-- <div class="service-list">
+                	<div class="service-list-col1">
+                    	<i class="fa-apple"></i>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3>eeee</h3>
+                        <p>Proin iaculis purus consequat digni sem digni ssim. Purus donec porttitora entum.</p>
+                    </div>
+                </div> -->
+                <div class="service-list">
+                	<div class="service-list-col1">
+                    	<i class="fa-dashboard"></i>
+                    </div>
+                	<div class="service-list-col2">
+                        <h3>Database Access</h3>
+                        <p>Anyone can use the backend for research or data analysis. We allow you to download and query for
+												articles in JSON format, making textual analysis across Princeton publications a
+											reality. Our full backend API can be found <a href="https://prowler333.herokuapp.com/docs/">here</a>.</p>
+                    </div>
+                </div>
+            </div>
+            <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+            	<img src="img/sampleArt.png" alt="">
+            </figure>
+
+        </div>
+	</div>
+</section><!--main-section-end-->
+
+
+
+<section class="main-section alabaster" id="design"><!--main-section alabaster-start-->
+	<div class="container">
+    	<div class="row">
+			<figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+            	<img  src="img/mainFeed.png" alt="">
+            </figure>
+        	<div class="col-lg-7 col-sm-8 featured-work">
+            	<h2>Design</h2>
+               <P class="padding-b">Our implementation consists of the three standard interfaces: a user interface, a web crawler, and a database.
+								 The user interface compiles to both IOS and Android devices, the web crawler is written in python, and the database is a standard MySQL database.
+								 This general framework makes “The Prowler” extendable to other publications (not just the Prince) as our UI can dynamically load all publications.
+								 The web scraper is easily extendable to inject new publications and them them to the hourly scrape.
+								 </P>
+            	<div class="featured-box">
+                	<div class="featured-box-col1 wow fadeInRight delay-02s">
+                    	<i class="fa-magic"></i>
+                    </div>
+                	<div class="featured-box-col2 wow fadeInRight delay-02s">
+                        <h3>User Interface</h3>
+                        <p>The user interface has to be dynamic as the data being supplied to it will change daily - also if we add publications, it should be robust enough to accept that change.
+													Our baseline is a scrolling feed with articles, the next step is a main page organized by section, and then a fully flushed recommendation system (with user login). </p>
+                    </div>
+                </div>
+                <div class="featured-box">
+                	<div class="featured-box-col1 wow fadeInRight delay-04s">
+                    	<i class="fa-gift"></i>
+                    </div>
+                	<div class="featured-box-col2 wow fadeInRight delay-04s">
+                        <h3>Web Service</h3>
+                        <p> Each communication with the database is handled through a web service python script running on an online server.
+													These requests will be handled with an HTTP protocol and JSON format data.
+													</p>
+                    </div>
+                </div>
+								<div class="featured-box">
+                	<div class="featured-box-col1 wow fadeInRight delay-04s">
+                    	<i class="fa-gift"></i>
+                    </div>
+                	<div class="featured-box-col2 wow fadeInRight delay-04s">
+                        <h3>Web Scraper</h3>
+                        <p> The web scraper is written in python.
+													It lives on an Amazon EC2 instance and pulls new articles hourly and then posts them to the database, while
+													making sure that duplicates do not occur.
+													It is easily extendable to scrape new publications.
+													</p>
+                    </div>
+                </div>
+                <div class="featured-box">
+                	<div class="featured-box-col1 wow fadeInRight delay-06s">
+                    	<i class="fa-dashboard"></i>
+                    </div>
+                	<div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>Database</h3>
+                        <p> Database: The publication data is stored consistently between sessions in a MySQL database which we can use with Heroku but also locally for testing.
+													There is a table for publication data (articles), one for user data, and one for user metadata associated with each article (comments etc.). </p>
+                    </div>
+                </div>
+                <a class="Learn-More" href="#">Learn More</a>
+            </div>
+        </div>
+	</div>
+</section><!--main-section alabaster-end-->
+
+
+
+<section class="main-section paddind" id="Portfolio"><!--main-section-start-->
+	<div class="container">
+    	<h2>Features</h2>
+    	<h6>Spice up your morning coffee or defecation.</h6>
+      <div class="portfolioFilter">
+        <ul class="Portfolio-nav wow fadeIn delay-02s">
+        	<li><a href="#" data-filter="*" class="current" >All</a></li>
+            <li><a href="#" data-filter=".branding" >The Feed</a></li>
+            <li><a href="#" data-filter=".webdesign" >Publications</a></li>
+            <li><a href="#" data-filter=".printdesign" >Topics</a></li>
+            <li><a href="#" data-filter=".photography" >Search</a></li>
+        </ul>
+       </div>
+
+	</div>
+    <div class="portfolioContainer wow fadeInUp delay-04s">
+            	<div class=" Portfolio-box printdesign">
+                	<a ><img src="img/sampleTopics.png" alt=""></a>
+                	<h3>Foto Album</h3>
+                    <p>Print Design</p>
+                </div>
+                <div class="Portfolio-box webdesign">
+                	<a ><img src="img/pub1.png" alt=""></a>
+                	<h3>Luca Theme</h3>
+                    <p>Web Design</p>
+                </div>
+								<div class="Portfolio-box webdesign">
+                	<a ><img src="img/pub2.png" alt=""></a>
+                	<h3>Luca Theme</h3>
+                    <p>Web Design</p>
+                </div>
+								<div class="Portfolio-box webdesign">
+                	<a ><img src="img/pub3.png" alt=""></a>
+                	<h3>Luca Theme</h3>
+                    <p>Web Design</p>
+                </div>
+                <div class=" Portfolio-box branding">
+                	<a ><img src="img/infiniScroll.png" alt=""></a>
+                	<h3>Uni Sans</h3>
+                    <p>Branding</p>
+                </div>
+                <div class=" Portfolio-box photography" >
+                	<a href="#"><img src="img/search.png" alt=""></a>
+                	<h3>Vinyl Record</h3>
+                    <p>Photography</p>
+                </div>
+                <!-- <div class=" Portfolio-box branding">
+                	<a href="#"><img src="img/Portfolio-pic5.jpg" alt=""></a>
+                	<h3>Hipster</h3>
+                    <p>Branding</p>
+                </div>
+                <div class=" Portfolio-box photography">
+                	<a href="#"><img src="img/Portfolio-pic6.jpg" alt=""></a>
+                	<h3>Windmills</h3>
+                    <p>Photography</p>
+                </div> -->
+    </div>
+</section><!--main-section-end-->
+
+<!--c-logo-part-start-->
+<!-- <div class="c-logo-part">
+	<div class="container">
+    	<ul>
+        	<li><a href="#"><img src="img/c-liogo1.png" alt=""></a></li>
+            <li><a href="#"><img src="img/c-liogo2.png" alt=""></a></li>
+            <li><a href="#"><img src="img/c-liogo3.png" alt=""></a></li>
+            <li><a href="#"><img src="img/c-liogo4.png" alt=""></a></li>
+            <li><a href="#"><img src="img/c-liogo5.png" alt=""></a></li>
+    	</ul>
+	</div>
+</div> -->
+<!--c-logo-part-end-->
+<section class="main-section team" id="team"><!--main-section team-start-->
+	<div class="container">
+        <h2>The Prowler Team</h2>
+        <h6>The cutting-edge models that convert coffee into code.</h6>
+        <div class="team-leader-block clearfix">
+            <div class="team-leader-box">
+               <div class="team-leader wow fadeInDown delay-09s">
+                   <img src="img/emily.jpg" alt="">
+               </div>
+                <h3 class="wow fadeInDown delay-03s">Emily Tang</h3>
+                <span class="wow fadeInDown delay-03s">Project Leader/ Code Monkey</span>
+                <p class="wow fadeInDown delay-03s">Emily is a visual artist and a BSE COS major from Cupertino, California. <br />
+									<em>emt4@</em></p>
+            </div>
+            <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-09s">
+                    <img src="img/eric.jpg" alt="">
+                </div>
+                <h3 class="wow fadeInDown delay-09s">Eric Hayes</h3>
+                <span class="wow fadeInDown delay-09s">Front-end</span>
+                <p class="wow fadeInDown delay-09s">Eric is a videographer and a BSE COS major from Calgary, Alberta. <br />
+									<em>eshayes@</em></p>
+            </div>
+            <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-09s">
+                    <img src="img/fabian.jpg" alt="">
+                </div>
+                <h3 class="wow fadeInDown delay-09s">Fabian Roberts</h3>
+                <span class="wow fadeInDown delay-09s">Back-end</span>
+                <p class="wow fadeInDown delay-09s"><br>Fabian is a heavyweight rower and an AB COS major from Llandaff, Cardiff. <br />
+									<em>folr@</em></p>
+            </div>
+		<div class="team-leader-box">
+               <div class="team-leader wow fadeInDown delay-09s">
+                   <img src="img/aamir.jpg" alt="">
+               </div>
+                <h3 class="wow fadeInDown delay-06s">Aamir Zainulabadeen</h3>
+                <span class="wow fadeInDown delay-06s">Web Scraper</span>
+                <p class="wow fadeInDown delay-06s">Aamir is a poet and an AB COS major from Rochester, NY. <br />
+									<em>aamirz@</em></p>
+            </div>
+        </div>
+    </div>
+</section><!--main-section team-end-->
+
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo"><a href="#"><img src="img/footer-logo.png" alt=""></a></div>
+        <span class="copyright">&copy; Knight Theme. All Rights Reserved</span>
+        <div class="credits">
+            <!--
+                All the links in the footer should remain intact.
+                You can delete the links only if you purchased the pro version.
+                Licensing information: https://bootstrapmade.com/license/
+                Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Knight
+            -->
+            <a href="https://bootstrapmade.com/free-business-bootstrap-themes-website-templates/">Business Bootstrap Themes</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript">
+    $(document).ready(function(e) {
+        $('#test').scrollToFixed();
+        $('.res-nav_click').click(function(){
+            $('.main-nav').slideToggle();
+            return false
+
+        });
+
+    });
+</script>
+
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+  </script>
+
+
+<script type="text/javascript">
+	$(window).load(function(){
+
+		$('.main-nav li a, .servicelink').bind('click',function(event){
+			var $anchor = $(this);
+
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top - 102
+			}, 1500,'easeInOutExpo');
+			/*
+			if you don't want to use the easing effects:
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1000);
+			*/
+      if ($(window).width() < 768 ) {
+        $('.main-nav').hide();
+      }
+			event.preventDefault();
+		});
+	})
+</script>
+
+<script type="text/javascript">
+
+$(window).load(function(){
+
+
+  var $container = $('.portfolioContainer'),
+      $body = $('body'),
+      colW = 375,
+      columns = null;
+
+
+  $container.isotope({
+    // disable window resizing
+    resizable: true,
+    masonry: {
+      columnWidth: colW
+    }
+  });
+
+  $(window).smartresize(function(){
+    // check if columns has changed
+    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
+    if ( currentColumns !== columns ) {
+      // set new column count
+      columns = currentColumns;
+      // apply width to container manually, then trigger relayout
+      $container.width( columns * colW )
+        .isotope('reLayout');
+    }
+
+  }).smartresize(); // trigger resize to set container width
+  $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+
+            filter: selector,
+         });
+         return false;
+    });
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<h1>The Princeton Prowler</h1>
+<h3>The Team:</h3>
+<p><b>Project Manager</b>: Emily Tang '18 (emt4)<br>
+<b>Group Members</b>: Fabian Lindfield Roberts '18 (folr), Eric Hayes '18 (eshayes), Aamir Zainulabadeen '18 (aamirz)</p>
+
+<div style="border:solid; padding:5px; margin:2px;">
+<h3>Goals for next week</h3>
+<ul>
+<li><b>Model</b>: Fine tune front end-database interactions. Write automated tests that check database functionality.</li>
+<li><b>View</b>: Link login page to database, create commenting functionalitystoring specific user data. Run tests on front-end usability and make sure key points are all working the way they should</li>
+<li><b>Controller</b>: The web scraper needs to be extended to include The Princeton Tiger and
+  it needs to be documented. </li>
+</ul>
+</div>
+<div style="border:solid; padding:5px; margin:2px;">
+<h3>Work completed during the past week</h3>
+<ul>
+<li><b>Model</b>: Added users and comments to database. Provided basic user authentication. Connected comments with
+a user so that only the owner of a comment can edit the comment. Edited API to return 20 records
+at a time rather than the entire list of records for a table.</li>
+<li><b>View</b>: Create login page shell, create category buttons, comple search bar to live update results as you type
+input and add comments to article.Set up search bar functionality and a side menu, updated our queries to database.</li>
+<li><b>Controller</b>: The web scraper was completely modularized to support the addition of new publications.
+Scripts were added to controll the publication/topic fomratting of the database.</li>
+</ul>
+</div>
+<div style="border:solid; padding:5px; margin:2px;">
+<h3>Work completed between April 18th and April 25th</h3>
+<ul>
+<li><b>Model</b>: Added topic and publication models to database. Setup article-topic and article-publication
+relationships. Added API functionality to add/delete/edit topic and publication records.</li>
+<li><b>View</b>: Finished implementing search functionality, allowing users to look at specific articles by category.</li>
+<li><b>Controller</b>: Got the webscraper running on an EC2 instance in the cloud. Fixed the image pulling bug in the
+code (with the date inconsitency).</li>
+</ul>
+</div>
+<div style="border:solid; padding:5px; margin:2px;">
+<h3>Work completed between April 11th and April 18th</h3>
+<ul>
+<li><b>Model</b>: Restricted access to editing requests in database rest API (POST, PUT, DELETE) to admin accounts. Created
+a new table in database to hold image links (design decision not to save images themselves in web bucket). Setup
+one-to-many relationship between article table and image table. Provided API functionality to populate image table
+and to retrieve images from database.</li>
+<li><b>View</b>: Connected back-end and front-end to display article images. Changed style and CSS to give app a new look. Began implementing search functionality.</li>
+<li><b>Controller</b>: Add functionality to the webscraper in order to have images pulled and POSTED to the database. </li>
+</ul>
+</div>
+<div style="border:solid; padding:5px; margin:2px;">
+<h3>Work completed between April 4th and April 11th</h3>
+<ul>
+<li><b>Model</b>: Developed rest API using django framework and hosted on heroku. API provides functionality to query database
+by date and document-id. It also provides grep functionality for the title, author and body fields.</li>
+<li><b>View</b>: Developed the skeleton of an app prototype. Integrated back-end and front-end, making it possible to access articles
+in our database from the app and display the text in the body. Set up and built our app to run in an iPhone simulator.</li>
+<li><b>Controller</b>: Finished adding image URLS. Tried to have an EC2 instance POSTING to database, but sadly failed.</li>
+</ul>
+</div>
+<div style="border:solid; padding:5px; margin:2px;">
+<h3>Work completed between March 28th and April 4th</h3>
+<ul>
+<li><b>Model</b>: Setup MySQL database hosted by ClearDB via heroku. Populated database by test data.</li>
+<li><b>View</b>: Investigated several SDK options for creating a mobile app. We settled on Ionic (SDK built with AngularJS), which allows
+us to develop our app for both Android and iOS using JavaScript, HTML, and CSS tools. Set up our working environment, learned by reverse
+engineering other apps.</li>
+<li><b>Controller</b>: Developed a fully functional webscraper for articles with granular modularity that pulls
+article title, body, author, date. Also developed functions to scrape article by URL and to scrape URLs from date querys to
+the Daily Prince for daily scraping.</li>
+</ul>
+</div>
+<h3>Overview:</h3>
+<p>
+We seek to develop a general reader application for publications on Princeton’s campus. This system would be built to aggregate all of the major publications on campus (The Daily Princetonian, Nassau Weekly, etc.) and publish them to a mobile platform. This system would be general enough to easily accommodate more publications as they form as well as to accommodate changes within publications over time.
+Our first test case is to build a mobile application for the Daily Princetonian, called, “The Prowler.” We have approached the Daily Princetonian and told them that we would like to make a mobile reader application for their publication and they are very excited. They gave us suggestions about features that they would like it to have. We hope to enhance the aesthetic and functional experiences of users as well as to provide the Daily Princetonian with a way to engage the student body directly. The application would be a way for the Daily Princetonian to publish to a mobile platform. Enhanced features such as archival search, commenting, and a personalized notification system would allow the Daily Princetonian to engage in more meaningful ways with its reader base.
+</p>
+<h3>Requirements and Target Audience:</h3>
+<p>
+Currently there is no general reader or centralized application for accessing Princeton publications. Like other publications, the Daily Princetonian’s website is currently accessible via mobile devices, however it is aesthetically displeasing as well as limited in functionality (there’s only commenting functionality with little engagement). Since it is hard to read the Daily Princetonian on mobile devices, it makes it difficult to access this publication on the go. The Prowler seeks to make the Daily Princetonian (as well as other publications) more accessible. We would also like to extend the functionality to include a recommendation system, better comments, and archival search. Our basic structure builds off of application systems like Google News etc. A baseline would provide a scrolling feed of headlines which then would then expand into short descriptions. Individual articles would have pages designated to them. Fancier implementations would organize by section, preference, etc.
+</p>
+<h3>Functionality:</h3>
+<p>
+<b>Use case</b>: quick news updates and personalized notifications: Ron receives a notification from the app saying that there is a new article about basketball. Ron opens the app and it takes him to the article where he reads it but mostly looks at the pictures. He clicks the home page button, which brings him to a personal curation of recommended articles. He skims through them quickly and although none of them catch his attention today, he gets enough of each article to get a general idea of the happenings on campus. He stars an article about a deer infiltrating Forbes. That will be a good read for later. He also stars an article about a policy change. After all, he has smart friends he needs to impress so he doesn’t seem out of touch with news.
+</p>
+<p>
+<b>Use case 2</b>: searching through historical archives: Ron’s smart friend Hermione is not interested in daily news, since she seeks out papers with a greater scope than campus. However, she loves history and digging into old archives. Hermione opens the app and searches for the word “trend” to see where the earliest occurrence of the word is in publication. She clicks the drop-down menu and clicks order by “date: oldest to newest” and finds her desired article. She wants to potentially do further research on this, so she sends the article to herself.
+</p>
+<p>
+<b>Use case 3</b>: sharing articles through social media: Mr. Lucius Malfoy is an alum of the school, but he simply cannot forget the great times he had here at Princeton. Therefore, he consistently follows up on the happenings through campus news, but he is also wants people to hear what he has to say. He opens up the app, and immediately clicks the drop-down menu and clicks order by “most read”, and clicks on the first link. He then shares it on Facebook so his 500 friends will see it, and writes a lengthy comment on its implications.
+</p>
+<h3>Design:</h3>
+<p>
+Our implementation consists of the three standard interfaces: a user interface, a web service, and a database. The user interface will be an IOS application, the web service will be written in python, and the database is a standard MySQL database. This general framework makes “The Prowler” extensible to other publications (not just the Prince) as our UI can abstract each publication. We would make new database tables (via python scripts for each new publication). The only portion that would have to be hard coded are the web scrapers.
+</p>
+<p>
+<b>UI</b>: The user interface has to be dynamic as the data being supplied to it will change daily - also if we add publications, it should be robust enough to accept that change. Our baseline is a scrolling feed with articles, the next step is a main page organized by section, and then a fully flushed recommendation system (with user login). Emily (emt4) and Eric (eshayes) are tackling this portion of the project.
+</p>
+<p>
+<b>Web Service</b>: Each communication with the database will be handled through a web service python script running on an online server (we are using Heroku to test, the Daily Princetonian has agreed to pay for formal service for the final implementation). These requests will be handled with an HTTP protocol and JSON format data.
+The webservice will supply the UI with daily data, so it will support high level operations in stages: GET_ARTICLE, GET_SECTION, and finally GET_PUBLICATION. So, there will be a component of the web service which communicates only with the IOS-Application, we call this the “ios-service.”
+Another portion of the web service will be devoted to scraping each publication for article content, title, author, date and then supplying this scraped content in JSON format to the MySQL database. We call this the “scraping-service.” We have almost finished implementing the scraping-service for the Daily Princetonian, i.e. we have finished abstracting scraping for articles by URL. We are currently having trouble making the HTTP request work without connection exceptions. Fabian (folr) and Aamir (aamirz) are handling this portion.
+</p>
+<p>
+<b>Database</b>: The publication data will be stored consistently between sessions in a MySQL database which we can use with Heroku but also locally for testing. There is a table for publication data (articles), one for user data, and one for user metadata associated with each article (comments etc.). Fabian (folr) is working on this portion and already has set up some tables, we are just working on the web service component now to populate the database.
+</p>
+<h3>Intended Timeline:</h3>
+<p>Initially our mobile application will get articles only from the Daily Princetonian. The application
+framework is general enough to be easily adaptable to other publications on campus, such
+as the Nassau Weekly, Stripes, etc..</p>
+<p>We have met with the Chief Editor of the Daily Princetonian as well as one of the Trustees and some of the staff.</p>
+<p>We are currently working on the MVP. We have written the web scraper and are in the process of scraping and storing
+articles from the Prince for our database. Once we have completed working on our simple news feed, we will develop
+high level functionality such as user notifications in real time, a simple recommendation system, and commenting.</p>
+<h4>Mon. March 27th</h4>
+<p>Have a baseline implementation working (scrolling feed with all articles web scraped from Daily Princetonian).</p>
+<h4>Sat. April 1st</h4>
+<p>Finish baseline testing (stress testing, portability, daily updates to feed). Start working on adding user login/comment functionality to the front end as well as web service and back end.</p>
+<h4>Sat. April 8th</h4>
+<p>Finish comment testing. Start working on recommendation system, section layout (as opposed to one feed), and notifications.</p>
+<h4>Sat. April 15th</h4>
+<p>Prototype testing with Daily Princetonian staff, get their suggestions on more functionality, aesthetics, and usability. Start work on the archival search.<p>
+<h4>Sat. April 22nd</h4>
+<p>Finish the archival(more involved)/article (less involved) search functionality. Abstract the baseline for multiple publications.</p>
+<h4>Sat. April 29th - Alpha test</h4>
+<p>Stress test our app and start preparing for demos for the following week. Integrate with social media. Have Daily Princetonian Staff test every day of the week and use feedback from Google Forms.</p>
+<p><b>Reliance on Webscraper</b>: Since we are relying on a webscraper to retrieve the data to display through our app, if the websites end up remodeling their infrastructure, we will lose the capacity to demo our product. However, this should not be too dangerous of a concern as we will keep in touch with the Daily Princetonian and make sure to avoid this sort of issue.</p>
+<p><b>Integration Issues</b>: Many of the features we want to add are involved with integrating with email/Facebook/Instagram, but these are very much reliant on the tutorials available for how to create a log-in portal. Although it is definitely something that is doable (since most apps do have this sort of feature), much of the information online is deprecated and this makes it a hurdle that may or may not take too much time to jump over. </p>
+<p><b>Aesthetics</b>: Making a beautiful UI is always difficult. Since the data wrangling end is really simple, Aamir and Fabian will try to help with this portion as well. We will try and experiment with existing news apps to see what some desirable/not so desirable traits are.</p>

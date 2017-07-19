@@ -1,0 +1,320 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Prowler Docs</title>
+  <meta name="description" content="Documentation for the Princeton Prowler">
+  <meta name="author" content="Fabian Lindfield Roberts">
+</head>
+
+<body>
+<h1>Prowler Documentation</h1>
+<h2>Database Request API</h2>
+<table border="1">
+  <tr>
+    <th>URL</th>
+    <th>Request Type(s)</th> 
+    <th>Description</th>
+  </tr>
+  <!-- ################### USERS -->
+  <tr>
+    <td>~/users/</td>
+    <td>Admin: GET</td> 
+    <td>Get all users</td>
+  </tr>
+  <tr>
+    <td>~/users/&lt;user-id&gt;/</td>
+    <td>Admin: GET</td> 
+    <td>Get a user by id</td>
+  </tr>
+  <!-- ################### IMAGES -->
+  <tr>
+    <td>~/images/</td>
+    <td>Any: GET<br>Admin: POST</td> 
+    <td>Get all images or post a single image</td>
+  </tr>
+  <tr>
+    <td>~/images/&lt;image-id&gt;/</td>
+    <td>Any: GET<br>Admin: PUT, DELETE</td> 
+    <td>Get, update or delete an image by id</td>
+  </tr>
+  <!-- ################### COMMENTS -->
+<!--   <tr>
+    <td>~/comments/</td>
+    <td>Any: GET<br>Admin/owner: POST</td> 
+    <td>Get all comments or post a single comment</td>
+  </tr>
+  <tr>
+    <td>~/comments/&lt;comment-id&gt;/</td>
+    <td>Any: GET<br>Admin/owner: PUT, DELETE</td> 
+    <td>Get, update or delete a comment by id</td>
+  </tr> -->
+  <!-- ################### ARTICLES -->
+  <tr>
+    <td>~/articles/</td>
+    <td>Any: GET<br>Admin: POST</td> 
+    <td>Get all articles or post a single article</td>
+  </tr>
+   <tr>
+    <td>~/articles/?title=&amp;author=&amp;body=&amp;topic=&amp;publication=</td>
+    <td>Any: GET<br>Admin: POST</td> 
+    <td>Get articles by url parameter</td>
+  </tr>
+  <tr>
+    <td>~/articles/&lt;article-id&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Get an article by id</td>
+  </tr>
+  <tr>
+    <td>~/articles/topic/&lt;topic-id&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Get all articles connected to a topic</td>
+  </tr>
+  <tr>
+    <td>~/articles/publication/&lt;publication-id&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Get all articles from a publication</td>
+  </tr>
+  <tr>
+    <td>~/articles/date/&lt;year&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Get articles by year</td>
+  </tr>
+  <tr>
+    <td>~/articles/date/&lt;year&gt;/&lt;month&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Get articles by month</td>
+  </tr>
+  <tr>
+    <td>~/articles/date/&lt;year&gt;/&lt;month&gt;/&lt;day&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Get articles by day</td>
+  </tr>
+  <tr>
+    <td>~/articles/title/&lt;query&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Search for articles by title grep</td>
+  </tr>
+  <tr>
+    <td>~/articles/body/&lt;query&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Search for articles by body text grep</td>
+  </tr>
+  <tr>
+    <td>~/articles/author/&lt;query&gt;/</td>
+    <td>Any: GET</td> 
+    <td>Search for articles by author grep</td>
+  </tr>
+  <!-- ################### TOPICS -->
+  <tr>
+    <td>~/topics/</td>
+    <td>Any: GET<br>Admin: POST</td> 
+    <td>Get all topics or post a single topic</td>
+  </tr>
+  <tr>
+    <td>~/topics/&lt;topic-id&gt;/</td>
+    <td>Any: GET<br>Admin: PUT, DELETE</td> 
+    <td>Get, update or delete a topic by id</td>
+  </tr>
+  <!-- ################### PUBLICATIONS -->
+  <tr>
+    <td>~/publications/</td>
+    <td>Any: GET<br>Admin: POST</td> 
+    <td>Get all publications or post a single publication</td>
+  </tr>
+  <tr>
+    <td>~/publications/&lt;publication-id&gt;/</td>
+    <td>Any: GET<br>Admin: PUT, DELETE</td> 
+    <td>Get, update or delete a publication by id</td>
+  </tr>
+</table>
+<br>
+
+
+<h2>Table: Image</h2>
+<table border="1">
+  <tr>
+    <th>Field</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+  	<td>id</td>
+  	<td>integer automatically assignmed</td>
+  </tr>
+  <tr>
+    <td>url</td>
+    <td>CharField (max_length = 500 characters)</td>
+  </tr>
+  <tr>
+    <td>article id</td>
+    <td>the integer id of an existing article </td>
+  </tr>
+</table>
+<br>
+
+<!-- <h2>Table: Comment</h2>
+<table border="1">
+  <tr>
+    <th>Field</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <td>body</td>
+    <td>CharField (max_length = 1000 characters)</td>
+  </tr>
+  <tr>
+    <td>date</td>
+    <td>DateTimeField</td>
+  </tr>
+  <tr>
+    <td>article</td>
+    <td>ForeignKey</td>
+  </tr>
+  <tr>
+    <td>owner</td>
+    <td>ForeignKey</td>
+  </tr>
+</table>
+<br> -->
+
+<h2>Table: Article</h2>
+<table border="1">
+  <tr>
+    <th>Field</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+  	<td>id</td>
+  	<td>integer automatically assignmed</td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>string (max_length = 100 characters)</td>
+  </tr>
+  <tr>
+    <td>author</td>
+    <td>string (max_length = 100 characters)</td>
+  </tr>
+  <tr>
+    <td>body</td>
+    <td>string (max_length = 60000 characters)</td>
+  </tr>
+  <tr>
+    <td>date</td>
+    <td>django <a href="https://docs.djangoproject.com/en/1.11/ref/forms/fields/#datetimefield">DateTimeField</a></td>
+  </tr>
+  <tr>
+    <td>url</td>
+    <td>url (max_length = 500 characters)</td>
+  </tr>
+  <tr>
+    <td>topic id</td>
+    <td>the integer id of an existing topic</td>
+  </tr>
+  <tr>
+    <td>publication id</td>
+    <td>the integer id of an existing publication</td>
+  </tr>
+</table>
+<br>
+
+<h2>Table: Topic</h2>
+<table border="1">
+  <tr>
+    <th>Field</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+  	<td>id</td>
+  	<td>integer automatically assignmed</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string (max_length = 100 characters)</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>string (max_length = 1000 characters)</td>
+  </tr>
+</table>
+<br>
+
+<h2>Table: Publication</h2>
+<table border="1">
+  <tr>
+    <th>Field</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+  	<td>id</td>
+  	<td>integer automatically assignmed</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string (max_length = 100 characters)</td>
+  </tr>
+
+  <tr>
+    <td>logo</td>
+    <td>url (max_length = 500 characters)</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>string (max_length = 1000 characters)</td>
+  </tr>
+</table>
+
+<h2>Table: User</h2>
+<table border="1">
+  <tr>
+    <th>Field</th>
+    <th>Type</th>
+  </tr>
+  <tr>
+    <td>password</td>
+    <td>raw password can be arbitrarily long</td>
+  </tr>
+  <tr>
+    <td>username</td>
+    <td>string (max_length = 150 characters)</td>
+  </tr>
+  <tr>
+    <td>first_name</td>
+    <td>string (max_length = 30 characters)</td>
+  </tr>
+  <tr>
+    <td>last_name</td>
+    <td>string (max_length = 30 characters)</td>
+  </tr>
+  <tr>
+    <td>email</td>
+    <td>valid email address</td>
+  </tr>
+  <tr>
+    <td>is_staff</td>
+    <td>boolean</td>
+  </tr>
+  <tr>
+    <td>is_superuser</td>
+    <td>boolean</td>
+  </tr>
+
+  <tr>
+    <td>is_active</td>
+    <td>boolean</td>
+  </tr>
+  <tr>
+    <td>last_login</td>
+    <td>django <a href="https://docs.djangoproject.com/en/1.11/ref/forms/fields/#datetimefield">DateTimeField</a></td>
+  </tr>
+  <tr>
+    <td>date_joined</td>
+    <td>django <a href="https://docs.djangoproject.com/en/1.11/ref/forms/fields/#datetimefield">DateTimeField</a></td>
+  </tr>
+</table>
+<br>
+
+</body>
+</html>
